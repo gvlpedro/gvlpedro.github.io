@@ -5,7 +5,7 @@
     <title>title</title>
     <script>
       (async () => {
-        let response = await fetch('learning_wasm.wasm');
+        let response = await fetch('wasm/app.wasm');
         let bytes = await response.arrayBuffer();
         let { instance } = await WebAssembly.instantiate(bytes, { });
 
